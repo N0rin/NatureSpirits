@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/StatusModifier.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+activation = "After"
+mode = "Add"
+burn = 1
+frost = 0
+wet = 0
+moss = 0
+charge = 0

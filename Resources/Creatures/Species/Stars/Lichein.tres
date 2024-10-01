@@ -1,0 +1,23 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/Creatures/BaseValues.gd" type="Script" id=1]
+[ext_resource path="res://assets/Creatures/Lichein.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Helfen/3a_Glutboden.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/6_Lightning/Geistkugel/3a_Sternenstrahl.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/6_Lightning/Helfen/3a_Sternentanz.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Helfen/3a_Flammenritual.tres" type="Resource" id=6]
+
+[resource]
+script = ExtResource( 1 )
+name = "Lichein"
+appearance = ExtResource( 2 )
+type = "Stars"
+element = ""
+speedstat = "Aroma"
+max_life = 18
+stability = 0
+balance = 2
+leaf = 3
+aroma = 10
+potential_moves = [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 3 ) ]
+evolutions = [  ]

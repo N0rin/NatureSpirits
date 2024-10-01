@@ -1,0 +1,13 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Fighter/Creature.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Rammen/1a_Rammen.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Creatures/Species/Base/Steiki.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1a_Wachsen.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Helfen/1a_ Helfen.tres" type="Resource" id=5]
+
+[node name="Steiki" instance=ExtResource( 1 )]
+current_hp = 20
+base_values = ExtResource( 3 )
+moves = [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ), null, null ]
+learned_spells = [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ) ]

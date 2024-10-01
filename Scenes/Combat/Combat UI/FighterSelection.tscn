@@ -1,0 +1,329 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/Textures/KOMIKAX_.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/Combat/Combat UI/FighterSelection.gd" type="Script" id=2]
+[ext_resource path="res://assets/Textures/selection.png" type="Texture" id=3]
+[ext_resource path="res://assets/Textures/multi_selection.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=4]
+size = 60
+extra_spacing_top = -4
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 60
+extra_spacing_top = -4
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 60
+extra_spacing_top = -4
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 60
+extra_spacing_top = -4
+font_data = ExtResource( 1 )
+
+[node name="Selection" type="Control"]
+margin_left = 956.0
+margin_right = 956.0
+margin_bottom = 480.0
+script = ExtResource( 2 )
+
+[node name="AllyLeft" type="TextureButton" parent="."]
+visible = false
+margin_left = -956.0
+margin_top = 534.0
+margin_right = -476.0
+margin_bottom = 1014.0
+rect_min_size = Vector2( 480, 480 )
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DamagePreview" type="Label" parent="AllyLeft"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -93.0
+margin_top = -164.0
+margin_right = 93.0
+custom_colors/font_color = Color( 0.733333, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "ko"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AccPreview" type="Label" parent="AllyLeft"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 55.0
+margin_top = -95.0
+margin_right = 175.0
+margin_bottom = -28.0
+custom_colors/font_color = Color( 0.972549, 0.792157, 0.0784314, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "100%"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="KoFactor" type="Label" parent="AllyLeft"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -138.881
+margin_top = -95.7028
+margin_right = -66.8811
+margin_bottom = -28.7028
+custom_colors/font_color = Color( 0.0784314, 0.831373, 0.972549, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "2.3"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="MultiText" type="TextureRect" parent="AllyLeft"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AllyRight" type="TextureButton" parent="."]
+visible = false
+margin_left = -472.0
+margin_top = 533.696
+margin_right = 7.99991
+margin_bottom = 1013.7
+rect_min_size = Vector2( 480, 480 )
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="DamagePreview" type="Label" parent="AllyRight"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -93.0
+margin_top = -164.0
+margin_right = 93.0
+custom_colors/font_color = Color( 0.733333, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "ko"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AccPreview" type="Label" parent="AllyRight"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 56.0
+margin_top = -93.0
+margin_right = 184.0
+margin_bottom = -18.0
+custom_colors/font_color = Color( 0.972549, 0.792157, 0.0784314, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "100%"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="MultiText" type="TextureRect" parent="AllyRight"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="KoFactor" type="Label" parent="AllyRight"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -135.697
+margin_top = -103.913
+margin_right = -71.6965
+margin_bottom = -36.9131
+custom_colors/font_color = Color( 0.0784314, 0.831373, 0.972549, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "2.3"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="EnemyLeft" type="TextureButton" parent="."]
+visible = false
+margin_right = 480.0
+margin_bottom = 480.0
+rect_min_size = Vector2( 480, 480 )
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="DamagePreview" type="Label" parent="EnemyLeft"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -93.0
+margin_top = -164.0
+margin_right = 93.0
+custom_colors/font_color = Color( 0.733333, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "ko"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AccPreview" type="Label" parent="EnemyLeft"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -179.0
+margin_top = -91.0
+margin_right = -59.0
+custom_colors/font_color = Color( 0.972549, 0.792157, 0.0784314, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "100%"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="MultiText" type="TextureRect" parent="EnemyLeft"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="KoFactor" type="Label" parent="EnemyLeft"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 101.563
+margin_top = -104.418
+margin_right = 173.563
+margin_bottom = -37.4178
+custom_colors/font_color = Color( 0.0784314, 0.831373, 0.972549, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "2.3"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="EnemyRight" type="TextureButton" parent="."]
+visible = false
+margin_left = 484.0
+margin_top = -0.303695
+margin_right = 964.0
+margin_bottom = 479.696
+rect_min_size = Vector2( 480, 480 )
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="DamagePreview" type="Label" parent="EnemyRight"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -93.0
+margin_top = -164.0
+margin_right = 93.0
+custom_colors/font_color = Color( 0.733333, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "ko"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AccPreview" type="Label" parent="EnemyRight"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -178.0
+margin_top = -91.0
+margin_right = -58.0
+custom_colors/font_color = Color( 0.972549, 0.792157, 0.0784314, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "100%"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="MultiText" type="TextureRect" parent="EnemyRight"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="KoFactor" type="Label" parent="EnemyRight"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 96.217
+margin_top = -102.636
+margin_right = 168.217
+margin_bottom = -35.6359
+custom_colors/font_color = Color( 0.0784314, 0.831373, 0.972549, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "2.3"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="AllyLeft" to="." method="_on_Ally_Left_pressed"]
+[connection signal="pressed" from="AllyRight" to="." method="_on_Ally_Right_pressed"]
+[connection signal="pressed" from="EnemyLeft" to="." method="_on_Enemy_Left_pressed"]
+[connection signal="pressed" from="EnemyRight" to="." method="_on_Enemy_Right_pressed"]

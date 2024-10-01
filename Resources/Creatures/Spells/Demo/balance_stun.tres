@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/UtilityModifier.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+activation = "On-Hit"
+heal_percentage = 0
+stagger = false
+stun = true
+knock_over = false
+protection = false
+advances_protect_counter = false
+shield = 0
+bond = 0
+rooted = 0
+
+[resource]
+script = ExtResource( 1 )
+name = "Balance-Stun"
+targets = "Others"
+multitarget = false
+type = "Attack"
+base_damage = 4
+attack_count = 1
+can_miss = true
+accuracy = 100
+priority = 0
+does_crit = false
+used_stat = "Balance"
+target_stat = "Balance"
+element = "None"
+uses_additional_spell = "No"
+user_modifiers = [  ]
+target_modifiers = [ SubResource( 1 ) ]
+description = "Stuns the target."
+evolve_quests = [  ]
+required_xp = 1

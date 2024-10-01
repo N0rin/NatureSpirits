@@ -1,0 +1,13 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1a_Wachsen.tres" type="Resource" id=1]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Seelenstoss/1a_Seelenstoss.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Nachtstich/1a_Nachtstich.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Species/Base/Birgge.tres" type="Resource" id=6]
+[ext_resource path="res://Scenes/Fighter/Creature.tscn" type="PackedScene" id=7]
+
+[node name="Birgge" instance=ExtResource( 7 )]
+custom_name = "Birg C"
+current_hp = 20
+base_values = ExtResource( 6 )
+moves = [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 2 ), null, null ]

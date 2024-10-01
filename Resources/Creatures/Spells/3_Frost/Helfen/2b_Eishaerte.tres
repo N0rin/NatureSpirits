@@ -1,0 +1,111 @@
+[gd_resource type="Resource" load_steps=11 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/UtilityModifier.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/Condition.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Creatures/Spells/StatusModifier.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Creatures/Spells/EvolveQuest.gd" type="Script" id=5]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Helfen/2a_Einfrieren.tres" type="Resource" id=6]
+
+[sub_resource type="Resource" id=6]
+script = ExtResource( 2 )
+is_checking_user = false
+move_order = ""
+chance = 100
+is_cost = false
+is_fail_condition = false
+burn = 0
+frost = 1
+wet = 0
+moss = 0
+charged = 0
+light = 0
+min_round = 0
+max_round = 0
+repetitions = 0
+required_aura = "None"
+required_terrain = "None"
+required_weather = "None"
+stagger = 0
+rooted = 0
+bond = 0
+check_stat_boosts = "No"
+check_stability = false
+check_balance = false
+check_leaf = false
+check_aroma = false
+check_speed = false
+stability_boost = 0
+balance_boost = 0
+leaf_boost = 0
+aroma_boost = 0
+speed_boost = 0
+
+[sub_resource type="Resource" id=7]
+script = ExtResource( 5 )
+xp_gain = 1
+requirement_type = "Defending"
+variant = "Normal"
+success_required = false
+required_success_chain = 1
+required_attacking_stat = "None"
+required_defending_stat = "None"
+required_element = "None"
+required_min_damage = 0
+required_max_damage = 0
+requires_knockout = false
+rising_damage = false
+required_aura = "None"
+requires_successfull_modifier = false
+reset_chain_on_xp_gain = true
+reset_chain_on_round_end = false
+required_target = "None"
+round_end_targets = "Self"
+condition = SubResource( 6 )
+subquests = [  ]
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 3 )
+activation = "Before"
+mode = "Consume"
+burn = 0
+frost = 2
+wet = 0
+moss = 0
+charge = 0
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 1 )
+activation = "On-Hit"
+heal_percentage = 0
+stagger = false
+stun = false
+knock_over = false
+protection = true
+advances_protect_counter = true
+shield = 0
+bond = 0
+rooted = 0
+
+[resource]
+script = ExtResource( 4 )
+name = "Eishärte"
+targets = "Self"
+multitarget = false
+type = "Status"
+base_damage = 0
+attack_count = 1
+can_miss = false
+accuracy = 100
+priority = 4
+does_crit = false
+used_stat = ""
+target_stat = ""
+element = "Frost"
+uses_additional_spell = "No"
+user_modifiers = [ SubResource( 4 ), SubResource( 5 ) ]
+target_modifiers = [  ]
+description = "Consumes 2x Frost. Protection+"
+evolves_from = ExtResource( 6 )
+evolve_quests = [ SubResource( 7 ) ]
+required_xp = 1

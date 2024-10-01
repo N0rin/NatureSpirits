@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Geistkugel/1a_Geistkugel.tres" type="Resource" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Creatures/EvolveQuests/GeiststrahlQuest.tres" type="Resource" id=3]
+
+[resource]
+script = ExtResource( 2 )
+name = "Geiststrahl "
+targets = "Others"
+multitarget = false
+type = ""
+base_damage = 5
+attack_count = 1
+can_miss = true
+accuracy = 100
+priority = 0
+does_crit = false
+used_stat = "Aroma"
+target_stat = "Leaf"
+element = ""
+uses_additional_spell = "No"
+user_modifiers = [  ]
+target_modifiers = [  ]
+description = "A simple Attack"
+evolves_from = ExtResource( 1 )
+evolve_quests = [ ExtResource( 3 ) ]
+required_xp = 3

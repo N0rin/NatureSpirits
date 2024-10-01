@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/standard_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/UI/SpellSelectButton.gd" type="Script" id=2]
+[ext_resource path="res://assets/Styles/InactiveButtonStyle.tres" type="StyleBox" id=3]
+[ext_resource path="res://assets/Styles/ActiveButtonStyle.tres" type="StyleBox" id=4]
+
+[node name="SpellSelectButton" type="Button"]
+margin_right = 391.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 400, 50 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/normal = ExtResource( 4 )
+text = "Spell"
+script = ExtResource( 2 )
+
+[node name="InactiveButton" type="Button" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/normal = ExtResource( 3 )
+text = "Spell"
+
+[connection signal="pressed" from="." to="." method="_on_active_button_pressed"]
+[connection signal="pressed" from="InactiveButton" to="." method="_on_inactive_button_pressed"]

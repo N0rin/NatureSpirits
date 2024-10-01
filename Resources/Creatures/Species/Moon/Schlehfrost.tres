@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Creatures/BaseValues.gd" type="Script" id=1]
+[ext_resource path="res://assets/Creatures/Schlehfrost.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Seelenstoss/3a_Regentanz.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Helfen/3a_Fruchtpanzer.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Helfen/3a_Eisdornenpanzer.tres" type="Resource" id=5]
+
+[resource]
+script = ExtResource( 1 )
+name = "Schlehfrost"
+appearance = ExtResource( 2 )
+type = "Moon"
+element = "Frost"
+speedstat = "Stability"
+max_life = 27
+stability = 5
+balance = 10
+leaf = 0
+aroma = 7
+potential_moves = [ ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ) ]
+evolutions = [  ]

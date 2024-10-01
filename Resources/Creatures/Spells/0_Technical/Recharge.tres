@@ -1,0 +1,25 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "Recharge"
+targets = "Self"
+multitarget = false
+type = "Status"
+base_damage = 0
+attack_count = 1
+can_miss = true
+accuracy = 100
+priority = 0
+does_crit = false
+used_stat = ""
+target_stat = ""
+element = ""
+uses_additional_spell = "No"
+user_modifiers = [  ]
+target_modifiers = [  ]
+description = ""
+evolve_quests = [  ]
+required_xp = 1

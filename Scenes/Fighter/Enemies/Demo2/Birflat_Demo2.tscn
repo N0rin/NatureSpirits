@@ -1,0 +1,13 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Creatures/Spells/5_Wind/Seelenstoss/2b_Wolkenfeger.tres" type="Resource" id=1]
+[ext_resource path="res://Resources/Creatures/Spells/5_Wind/Wachsen/2a_Wirbeltanz.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Seelenstoss/2b_Flammenfessel.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Nachtstich/2a_Feuerschlag.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Wachsen/2a_Feuertanz.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Creatures/Species/Sun/Birflat.tres" type="Resource" id=6]
+[ext_resource path="res://Scenes/Fighter/Creature.tscn" type="PackedScene" id=7]
+
+[node name="Birflat" instance=ExtResource( 7 )]
+base_values = ExtResource( 6 )
+moves = [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 2 ) ]

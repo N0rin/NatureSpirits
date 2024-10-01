@@ -1,0 +1,63 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/EvolveQuest.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/Condition.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Rammen/1b_Starkramme.tres" type="Resource" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+is_checking_user = false
+move_order = "After Target"
+chance = 100
+is_cost = false
+is_fail_condition = false
+burn = 0
+frost = 0
+wet = 0
+moss = 0
+charged = 0
+light = 0
+min_round = 0
+max_round = 0
+repetitions = 0
+required_aura = "None"
+required_terrain = "None"
+required_weather = "None"
+stagger = 0
+rooted = 0
+bond = 0
+check_stat_boosts = "No"
+check_stability = false
+check_balance = false
+check_leaf = false
+check_aroma = false
+check_speed = false
+stability_boost = 0
+balance_boost = 0
+leaf_boost = 0
+aroma_boost = 0
+speed_boost = 0
+
+[resource]
+script = ExtResource( 1 )
+xp_gain = 1
+requirement_type = "Hit"
+variant = "Normal"
+success_required = true
+required_success_chain = 1
+required_spell = ExtResource( 3 )
+required_attacking_stat = "None"
+required_defending_stat = "None"
+required_element = "None"
+required_min_damage = 0
+required_max_damage = 100
+requires_knockout = true
+rising_damage = false
+required_aura = "None"
+requires_successfull_modifier = false
+reset_chain_on_xp_gain = true
+reset_chain_on_round_end = false
+required_target = "None"
+round_end_targets = "Self"
+condition = SubResource( 1 )
+subquests = [  ]

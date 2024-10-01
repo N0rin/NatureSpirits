@@ -1,0 +1,62 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/StatusModifier.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Creatures/Spells/EvolveQuest.gd" type="Script" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Helfen/1c_Anfeuern.tres" type="Resource" id=4]
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 3 )
+xp_gain = 1
+requirement_type = "Hit"
+variant = "Normal"
+success_required = true
+required_success_chain = 1
+required_spell = ExtResource( 4 )
+required_attacking_stat = "None"
+required_defending_stat = "None"
+required_element = "None"
+required_min_damage = 0
+required_max_damage = 100
+requires_knockout = false
+rising_damage = false
+required_aura = "Fire"
+requires_successfull_modifier = false
+reset_chain_on_xp_gain = true
+reset_chain_on_round_end = false
+required_target = "None"
+round_end_targets = "Self"
+subquests = [  ]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 1 )
+activation = "On-Hit"
+mode = "Multiply"
+burn = 2
+frost = 0
+wet = 0
+moss = 0
+charge = 0
+
+[resource]
+script = ExtResource( 2 )
+name = "Erhitzen"
+targets = "All"
+multitarget = false
+type = "Status"
+base_damage = 0
+attack_count = 1
+can_miss = false
+accuracy = 100
+priority = 0
+does_crit = false
+used_stat = ""
+target_stat = ""
+element = "Fire"
+uses_additional_spell = "No"
+user_modifiers = [  ]
+target_modifiers = [ SubResource( 1 ) ]
+description = "Doubles Burn on target."
+evolves_from = ExtResource( 4 )
+evolve_quests = [ SubResource( 2 ) ]
+required_xp = 1

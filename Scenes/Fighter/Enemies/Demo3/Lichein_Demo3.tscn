@@ -1,0 +1,13 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Seelenstoss/2b_Eishauch.tres" type="Resource" id=1]
+[ext_resource path="res://Resources/Creatures/Spells/6_Lightning/Geistkugel/3a_Sternenstrahl.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/6_Lightning/Helfen/3a_Sternentanz.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Species/Stars/Lichein.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Seelenstoss/2b_Feuerhauch.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Creatures/Spells/6_Lightning/Helfen/2b_Lichtschild.tres" type="Resource" id=6]
+[ext_resource path="res://Scenes/Fighter/Creature.tscn" type="PackedScene" id=7]
+
+[node name="Lichein" instance=ExtResource( 7 )]
+base_values = ExtResource( 4 )
+moves = [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 3 ) ]

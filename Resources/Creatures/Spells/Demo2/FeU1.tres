@@ -1,0 +1,50 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/StatusModifier.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Creatures/Spells/UtilityModifier.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+activation = "On-Hit"
+heal_percentage = 60
+stagger = false
+stun = false
+knock_over = false
+protection = false
+advances_protect_counter = false
+shield = 0
+bond = 0
+rooted = 0
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+activation = "On-Hit"
+mode = "Add"
+burn = 1
+frost = 0
+wet = 0
+moss = 0
+charge = 0
+
+[resource]
+script = ExtResource( 1 )
+name = "Feuerheilung"
+targets = "Self"
+multitarget = false
+type = "Status"
+base_damage = 0
+attack_count = 1
+can_miss = false
+accuracy = 100
+priority = 0
+does_crit = false
+used_stat = ""
+target_stat = ""
+element = "Fire"
+uses_additional_spell = "No"
+user_modifiers = [ SubResource( 1 ), SubResource( 2 ) ]
+target_modifiers = [  ]
+description = "Heilt und verbrennt Anwender."
+evolve_quests = [  ]
+required_xp = 1

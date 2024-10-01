@@ -1,0 +1,147 @@
+[gd_resource type="Resource" load_steps=11 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/Condition.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Creatures/Spells/ArenaModifier.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Creatures/Spells/EvolveQuest.gd" type="Script" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/6_Lightning/Geistkugel/2b_Irrlichtschwarm.tres" type="Resource" id=5]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+is_checking_user = true
+move_order = ""
+chance = 100
+is_cost = false
+is_fail_condition = false
+burn = 0
+frost = 0
+wet = 0
+moss = 0
+charged = 0
+light = 2
+min_round = 0
+max_round = 0
+repetitions = 0
+required_aura = "None"
+required_terrain = "None"
+required_weather = "None"
+stagger = 0
+rooted = 0
+bond = 0
+check_stat_boosts = "No"
+check_stability = false
+check_balance = false
+check_leaf = false
+check_aroma = false
+check_speed = false
+stability_boost = 0
+balance_boost = 0
+leaf_boost = 0
+aroma_boost = 0
+speed_boost = 0
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 4 )
+xp_gain = 1
+requirement_type = "Hit"
+variant = "Normal"
+success_required = true
+required_success_chain = 5
+required_spell = ExtResource( 5 )
+required_attacking_stat = "None"
+required_defending_stat = "None"
+required_element = "None"
+required_min_damage = 0
+required_max_damage = 100
+requires_knockout = false
+rising_damage = false
+required_aura = ""
+requires_successfull_modifier = false
+reset_chain_on_xp_gain = true
+reset_chain_on_round_end = true
+required_target = "None"
+round_end_targets = "Self"
+subquests = [  ]
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 1 )
+name = "Sternenstrahl"
+targets = "Others"
+multitarget = false
+type = ""
+base_damage = 20
+attack_count = 1
+can_miss = true
+accuracy = 100
+priority = 0
+does_crit = false
+used_stat = "Aroma"
+target_stat = "Leaf"
+element = "Lightning"
+uses_additional_spell = "No"
+user_modifiers = [  ]
+target_modifiers = [  ]
+description = ""
+evolve_quests = [  ]
+required_xp = 1
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 1 )
+name = "Charge"
+targets = "Others"
+multitarget = false
+type = "Status"
+base_damage = 0
+attack_count = 1
+can_miss = false
+accuracy = 100
+priority = 0
+does_crit = false
+used_stat = ""
+target_stat = ""
+element = ""
+uses_additional_spell = "After"
+extra_spell = SubResource( 2 )
+user_modifiers = [  ]
+target_modifiers = [  ]
+description = ""
+evolve_quests = [  ]
+required_xp = 1
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 3 )
+activation = "After"
+light = -2
+soul = 0
+aura_type = "None"
+aura_duration = 0
+weather_type = "None"
+weather_duration = 0
+terrain_type = "None"
+terrain_duration = 0
+
+[resource]
+resource_name = "Sternenstrahl"
+script = ExtResource( 1 )
+name = "Sternenstrahl"
+targets = "Others"
+multitarget = false
+type = ""
+base_damage = 15
+attack_count = 1
+can_miss = true
+accuracy = 100
+priority = 0
+does_crit = false
+used_stat = "Aroma"
+target_stat = "Leaf"
+element = "Lightning"
+uses_additional_spell = "Not on Condition"
+condition = SubResource( 1 )
+extra_spell = SubResource( 3 )
+user_modifiers = [ SubResource( 4 ) ]
+target_modifiers = [  ]
+description = "Charges 1 Round and attacks on the second. Consumes two lights to attack instantly, if possible."
+evolves_from = ExtResource( 5 )
+evolve_quests = [ SubResource( 5 ) ]
+required_xp = 1

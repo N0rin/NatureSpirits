@@ -1,0 +1,92 @@
+[gd_resource type="Resource" load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/Condition.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Creatures/Spells/StatusModifier.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Creatures/Spells/ArenaModifier.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Creatures/Spells/Factor.gd" type="Script" id=5]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+is_checking_user = true
+move_order = ""
+chance = 100
+is_cost = false
+is_fail_condition = false
+burn = 1
+frost = 0
+wet = 0
+moss = 0
+charged = 0
+light = 0
+min_round = 0
+max_round = 0
+repetitions = 0
+required_aura = "None"
+required_terrain = "None"
+required_weather = "None"
+stagger = 0
+rooted = 0
+bond = 0
+check_stat_boosts = "No"
+check_stability = false
+check_balance = false
+check_leaf = false
+check_aroma = false
+check_speed = false
+stability_boost = 0
+balance_boost = 0
+leaf_boost = 0
+aroma_boost = 0
+speed_boost = 0
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 5 )
+mode = "Additive"
+condition = SubResource( 1 )
+flat_value = 0
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 4 )
+activation = "Before"
+light = 1
+soul = 0
+aura_type = "None"
+aura_duration = 0
+weather_type = "None"
+weather_duration = 0
+terrain_type = "None"
+terrain_duration = 0
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 3 )
+activation = "On-Hit"
+mode = "Heal"
+burn = 1
+frost = 0
+wet = 0
+moss = 0
+charge = 0
+
+[resource]
+script = ExtResource( 1 )
+name = "Flammentanz"
+targets = "Enemies"
+multitarget = true
+type = "Attack"
+base_damage = 5
+attack_count = 1
+attack_count_factor = SubResource( 2 )
+can_miss = true
+accuracy = 100
+priority = 0
+does_crit = false
+used_stat = "Aroma"
+target_stat = "Balance"
+element = "Fire"
+uses_additional_spell = "No"
+user_modifiers = [ SubResource( 3 ), SubResource( 4 ) ]
+target_modifiers = [  ]
+description = "Enfternt Verbrennung von Nutzer und führt für jede Verbrennung einen Angriff aus, der ein Licht auf der Seite des Nutzers erzeugt."
+evolve_quests = [  ]
+required_xp = 1

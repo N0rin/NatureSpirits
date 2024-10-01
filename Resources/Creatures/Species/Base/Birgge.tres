@@ -1,0 +1,66 @@
+[gd_resource type="Resource" load_steps=41 format=2]
+
+[ext_resource path="res://Scripts/Creatures/BaseValues.gd" type="Script" id=1]
+[ext_resource path="res://assets/Creatures/Birgge.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1a_Wachsen.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1b_Stabilisieren.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Geistkugel/1b_Geistgeschoss.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1b_Blocken.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Seelenstoss/1a_Seelenstoss.tres" type="Resource" id=7]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Seelenstoss/1b_Pollenstrom.tres" type="Resource" id=8]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Geistkugel/1b_Geiststrahl.tres" type="Resource" id=9]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1c_Schutzschild.tres" type="Resource" id=10]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1c_Bluetentanz.tres" type="Resource" id=11]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Geistkugel/1a_Geistkugel.tres" type="Resource" id=12]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1b_Geistertanz.tres" type="Resource" id=13]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Geistkugel/1c_Seelenorb.tres" type="Resource" id=14]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1c_Verteidigen.tres" type="Resource" id=15]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Seelenstoss/1c_Pollenhauch.tres" type="Resource" id=16]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Seelenstoss/1c_Sonnenblitz.tres" type="Resource" id=17]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Geistkugel/1c_Energiestrahl.tres" type="Resource" id=18]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1c_Verwurzeln.tres" type="Resource" id=19]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1c_Sprosstanz.tres" type="Resource" id=20]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Nachtstich/1a_Nachtstich.tres" type="Resource" id=21]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Helfen/1a_ Helfen.tres" type="Resource" id=22]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Helfen/1c_Anfeuern.tres" type="Resource" id=23]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Geistkugel/1c_Seelenschuss.tres" type="Resource" id=24]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Helfen/1c_Schrei.tres" type="Resource" id=25]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Helfen/1b_Stoeren.tres" type="Resource" id=26]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Helfen/1c_Beschuetzen.tres" type="Resource" id=27]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Helfen/1c_Staerken.tres" type="Resource" id=28]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Helfen/1b_Stuetzen.tres" type="Resource" id=29]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Helfen/1b_Jubeln.tres" type="Resource" id=30]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Nachtstich/1c_Wirbelfarnschlag.tres" type="Resource" id=31]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Nachtstich/1c_Wuchtfarnschlag.tres" type="Resource" id=32]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Nachtstich/1b_Farnschlag.tres" type="Resource" id=33]
+[ext_resource path="res://Resources/Creatures/Species/Stars/Nachthain.tres" type="Resource" id=34]
+[ext_resource path="res://Scripts/Creatures/Evolution.gd" type="Script" id=35]
+[ext_resource path="res://Resources/Creatures/Species/Sun/Birflat.tres" type="Resource" id=36]
+[ext_resource path="res://Resources/Creatures/Species/Earth/Schalhasel.tres" type="Resource" id=37]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 35 )
+new_species = ExtResource( 37 )
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 35 )
+new_species = ExtResource( 34 )
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 35 )
+new_species = ExtResource( 36 )
+
+[resource]
+script = ExtResource( 1 )
+name = "Birgge"
+appearance = ExtResource( 2 )
+type = ""
+element = ""
+speedstat = ""
+max_life = 5
+stability = 1
+balance = 2
+leaf = 4
+aroma = 4
+potential_moves = [ ExtResource( 12 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 18 ), ExtResource( 14 ), ExtResource( 24 ), ExtResource( 22 ), ExtResource( 30 ), ExtResource( 26 ), ExtResource( 29 ), ExtResource( 23 ), ExtResource( 27 ), ExtResource( 25 ), ExtResource( 28 ), ExtResource( 21 ), ExtResource( 33 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 13 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 20 ), ExtResource( 15 ), ExtResource( 19 ) ]
+evolutions = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]

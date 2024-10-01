@@ -1,0 +1,38 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/StatModifier.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Rammen/1a_Rammen.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/EvolveQuests/StarkrammeQuest.tres" type="Resource" id=4]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 1 )
+activation = "On-Hit"
+random_stat = 0
+stability_change = 1
+balance_change = 0
+leaf_change = 0
+aroma_change = 0
+
+[resource]
+script = ExtResource( 2 )
+name = "Starkramme"
+targets = "Others"
+multitarget = false
+type = ""
+base_damage = 10
+attack_count = 1
+can_miss = true
+accuracy = 60
+priority = 0
+does_crit = false
+used_stat = "Stability"
+target_stat = "Stability"
+element = ""
+uses_additional_spell = "No"
+user_modifiers = [ SubResource( 1 ) ]
+target_modifiers = [  ]
+description = "+Stability on user."
+evolves_from = ExtResource( 3 )
+evolve_quests = [ ExtResource( 4 ) ]
+required_xp = 1

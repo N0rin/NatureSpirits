@@ -1,0 +1,23 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Seelenstoss/2a_Hitzehauch.tres" type="Resource" id=1]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Seelenstoss/2a_Feuerstoss.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/5_Wind/Seelenstoss/2b_Wolkenfeger.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/5_Wind/Seelenstoss/2a_Windstoss.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/5_Wind/Geistkugel/2a_Luftstrom.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Creatures/Spells/5_Wind/Seelenstoss/2b_Sturmfeger.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Seelenstoss/2b_Feuerwelle.tres" type="Resource" id=7]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Seelenstoss/2b_Brandstoss.tres" type="Resource" id=8]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Seelenstoss/2b_Feuerhauch.tres" type="Resource" id=9]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Seelenstoss/2b_Flammenfessel.tres" type="Resource" id=10]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Geistkugel/2b_Flammenring.tres" type="Resource" id=11]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Geistkugel/2a_Flammenstrahl.tres" type="Resource" id=12]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Geistkugel/2a_Feuerball.tres" type="Resource" id=13]
+[ext_resource path="res://Resources/Creatures/Species/Sun/Strakir.tres" type="Resource" id=14]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Geistkugel/2b_Feuerblueten.tres" type="Resource" id=15]
+[ext_resource path="res://Scenes/Fighter/Creature.tscn" type="PackedScene" id=16]
+
+[node name="Strakir" instance=ExtResource( 16 )]
+base_values = ExtResource( 14 )
+moves = [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 15 ) ]
+learned_spells = [ ExtResource( 13 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 3 ) ]

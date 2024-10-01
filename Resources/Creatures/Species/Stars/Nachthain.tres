@@ -1,0 +1,54 @@
+[gd_resource type="Resource" load_steps=35 format=2]
+
+[ext_resource path="res://Scripts/Creatures/BaseValues.gd" type="Script" id=1]
+[ext_resource path="res://assets/Creatures/Nachthain.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Helfen/2b_Flammentanz.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Seelenstoss/2a_Feuerstoss.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Seelenstoss/2a_Hitzehauch.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Seelenstoss/2b_Brandstoss.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Nachtstich/2a_Feuerschlag.tres" type="Resource" id=7]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Geistkugel/2a_Flammenstrahl.tres" type="Resource" id=8]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Seelenstoss/2b_Feuerhauch.tres" type="Resource" id=9]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Seelenstoss/2b_Flammenfessel.tres" type="Resource" id=10]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Helfen/2a_Erhitzen.tres" type="Resource" id=11]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Geistkugel/2a_Feuerball.tres" type="Resource" id=12]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Geistkugel/2a_Eisstrahl.tres" type="Resource" id=13]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Seelenstoss/2b_Feuerwelle.tres" type="Resource" id=14]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Geistkugel/2b_Flammenring.tres" type="Resource" id=15]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Wachsen/2a_Feuertanz.tres" type="Resource" id=16]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Wachsen/2b_Fackeltanz.tres" type="Resource" id=17]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Seelenstoss/2b_Frostwelle.tres" type="Resource" id=18]
+[ext_resource path="res://Resources/Creatures/Spells/6_Lightning/Helfen/2b_Lichtschild.tres" type="Resource" id=19]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Helfen/2a_Einfrieren.tres" type="Resource" id=20]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Geistkugel/2a_Frostschuss.tres" type="Resource" id=21]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Helfen/2b_Vereisen.tres" type="Resource" id=22]
+[ext_resource path="res://Resources/Creatures/Spells/6_Lightning/Helfen/2b_Reinigen.tres" type="Resource" id=23]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Seelenstoss/2b_Eishauch.tres" type="Resource" id=24]
+[ext_resource path="res://Resources/Creatures/Spells/6_Lightning/Geistkugel/2a_Signalstrahl.tres" type="Resource" id=25]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Seelenstoss/2a_Kaeltehauch.tres" type="Resource" id=26]
+[ext_resource path="res://Resources/Creatures/Spells/6_Lightning/Helfen/2b_Ladestrahl.tres" type="Resource" id=27]
+[ext_resource path="res://Resources/Creatures/Spells/6_Lightning/Geistkugel/2b_Irrlichtschwarm.tres" type="Resource" id=28]
+[ext_resource path="res://Resources/Creatures/Spells/6_Lightning/Helfen/2a_Aufladen.tres" type="Resource" id=29]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Helfen/2b_Eishaerte.tres" type="Resource" id=30]
+[ext_resource path="res://Resources/Creatures/Spells/6_Lightning/Helfen/2a_Lichtschutz.tres" type="Resource" id=31]
+[ext_resource path="res://Resources/Creatures/Species/Stars/Lichein.tres" type="Resource" id=32]
+[ext_resource path="res://Scripts/Creatures/Evolution.gd" type="Script" id=33]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 33 )
+new_species = ExtResource( 32 )
+
+[resource]
+script = ExtResource( 1 )
+name = "Nachthain"
+appearance = ExtResource( 2 )
+type = "Stars"
+element = ""
+speedstat = "Aroma"
+max_life = 50
+stability = 0
+balance = 2
+leaf = 4
+aroma = 8
+potential_moves = [ ExtResource( 25 ), ExtResource( 28 ), ExtResource( 8 ), ExtResource( 15 ), ExtResource( 13 ), ExtResource( 21 ), ExtResource( 12 ), ExtResource( 31 ), ExtResource( 23 ), ExtResource( 19 ), ExtResource( 11 ), ExtResource( 3 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 30 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 14 ), ExtResource( 9 ), ExtResource( 26 ), ExtResource( 18 ), ExtResource( 24 ), ExtResource( 16 ), ExtResource( 17 ) ]
+evolutions = [ SubResource( 1 ) ]

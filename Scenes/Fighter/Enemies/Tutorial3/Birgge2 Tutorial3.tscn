@@ -1,0 +1,14 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Geistkugel/1c_Seelenorb.tres" type="Resource" id=1]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Seelenstoss/1c_Pollenhauch.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Geistkugel/1c_Energiestrahl.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Helfen/1c_Anfeuern.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Helfen/1c_Staerken.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Creatures/Species/Base/Birgge.tres" type="Resource" id=6]
+[ext_resource path="res://Scenes/Fighter/Creature.tscn" type="PackedScene" id=7]
+
+[node name="Birgge" instance=ExtResource( 7 )]
+current_hp = 20
+base_values = ExtResource( 6 )
+moves = [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ) ]

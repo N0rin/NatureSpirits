@@ -1,0 +1,67 @@
+[gd_resource type="Resource" load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Creatures/Spells/0_Technical/Recharge.tres" type="Resource" id=2]
+[ext_resource path="res://Scripts/Creatures/Spells/UtilityModifier.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Creatures/Spells/EvolveQuest.gd" type="Script" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/7_Ground/Nachtstich/2b_Haselschwinger.tres" type="Resource" id=5]
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 4 )
+xp_gain = 1
+requirement_type = "Hit"
+variant = "Normal"
+success_required = true
+required_success_chain = 1
+required_spell = ExtResource( 5 )
+required_attacking_stat = "None"
+required_defending_stat = "None"
+required_element = "None"
+required_min_damage = 8
+required_max_damage = 100
+requires_knockout = false
+rising_damage = false
+required_aura = ""
+requires_successfull_modifier = false
+reset_chain_on_xp_gain = true
+reset_chain_on_round_end = false
+required_target = "None"
+round_end_targets = "Self"
+subquests = [  ]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+activation = "On-Hit"
+heal_percentage = 0
+stagger = false
+stun = false
+knock_over = true
+protection = false
+advances_protect_counter = false
+shield = 0
+bond = 0
+rooted = 0
+
+[resource]
+script = ExtResource( 1 )
+name = "Haseleinschlag"
+targets = "Others"
+multitarget = false
+type = ""
+base_damage = 10
+attack_count = 1
+can_miss = true
+accuracy = 100
+priority = 0
+does_crit = false
+used_stat = "Stability"
+target_stat = "Stability"
+element = "Ground"
+uses_additional_spell = "After"
+extra_spell = ExtResource( 2 )
+user_modifiers = [  ]
+target_modifiers = [ SubResource( 1 ) ]
+description = "User recharges next round. Knocks target over, if it has less Stability"
+evolves_from = ExtResource( 5 )
+evolve_quests = [ SubResource( 2 ) ]
+required_xp = 1

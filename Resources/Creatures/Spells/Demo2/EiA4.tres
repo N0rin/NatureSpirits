@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/StatusModifier.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+activation = "On-Hit"
+mode = "Add"
+burn = 0
+frost = 1
+wet = 0
+moss = 0
+charge = 0
+
+[resource]
+script = ExtResource( 1 )
+name = "Eisdornen"
+targets = "Others"
+multitarget = false
+type = "Attack"
+base_damage = 7
+attack_count = 1
+can_miss = true
+accuracy = 100
+priority = 0
+does_crit = false
+used_stat = "Balance"
+target_stat = "Stability"
+element = "Frost"
+uses_additional_spell = "No"
+user_modifiers = [ SubResource( 1 ) ]
+target_modifiers = [  ]
+description = "Anwender bekommt 1x Frost."
+evolve_quests = [  ]
+required_xp = 1

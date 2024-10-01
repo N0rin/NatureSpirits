@@ -1,0 +1,15 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Geistkugel/1b_Geistgeschoss.tres" type="Resource" id=1]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Seelenstoss/1b_Pollenstrom.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Geistkugel/1b_Geiststrahl.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Helfen/1b_Jubeln.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Helfen/1b_Stuetzen.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Creatures/Species/Base/Birgge.tres" type="Resource" id=6]
+[ext_resource path="res://Scenes/Fighter/Creature.tscn" type="PackedScene" id=7]
+
+[node name="Birgge" instance=ExtResource( 7 )]
+custom_name = "Birg D"
+current_hp = 20
+base_values = ExtResource( 6 )
+moves = [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 2 ) ]

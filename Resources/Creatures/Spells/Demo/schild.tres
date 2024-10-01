@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/UtilityModifier.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+activation = "On-Hit"
+heal_percentage = 0
+stagger = false
+stun = false
+knock_over = false
+protection = false
+advances_protect_counter = false
+shield = 1
+bond = 0
+rooted = 0
+
+[resource]
+script = ExtResource( 1 )
+name = "Schild"
+targets = "Allies"
+multitarget = false
+type = "Status"
+base_damage = 0
+attack_count = 1
+can_miss = false
+accuracy = 100
+priority = 1
+does_crit = false
+used_stat = "None"
+target_stat = "None"
+element = "None"
+uses_additional_spell = "No"
+user_modifiers = [  ]
+target_modifiers = [ SubResource( 1 ) ]
+description = "Gibt Ziel ein Schild, was es vor dem nächsten Angriff schützt."
+evolve_quests = [  ]
+required_xp = 1

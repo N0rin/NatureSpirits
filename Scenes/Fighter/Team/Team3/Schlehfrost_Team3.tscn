@@ -1,0 +1,23 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Rammen/2a_Wasserrolle.tres" type="Resource" id=1]
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Rammen/2b_Wasserwirbel.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Rammen/2a_Wasserwalze.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Rammen/2a_Eisramme.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Rammen/2b_Regenrolle.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Helfen/2b_Eishaerte.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Helfen/2a_Einfrieren.tres" type="Resource" id=7]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Helfen/2b_Vereisen.tres" type="Resource" id=8]
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Helfen/2b_Wasserwall.tres" type="Resource" id=9]
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Helfen/2a_Bewaessern.tres" type="Resource" id=10]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Helfen/3a_Eisdornenpanzer.tres" type="Resource" id=11]
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Helfen/3a_Fruchtpanzer.tres" type="Resource" id=12]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Rammen/2b_Eisstacheln.tres" type="Resource" id=13]
+[ext_resource path="res://Resources/Creatures/Species/Moon/Schlehfrost.tres" type="Resource" id=14]
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Rammen/3a_Fruchtrolle.tres" type="Resource" id=15]
+[ext_resource path="res://Scenes/Fighter/Creature.tscn" type="PackedScene" id=16]
+
+[node name="Schlehfrost" instance=ExtResource( 16 )]
+base_values = ExtResource( 14 )
+moves = [ ExtResource( 8 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 11 ) ]
+learned_spells = [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 4 ), ExtResource( 13 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 15 ) ]

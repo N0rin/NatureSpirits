@@ -1,0 +1,43 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/UtilityModifier.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1b_Blocken.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/EvolveQuests/SchutzschildQuest.tres" type="Resource" id=4]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 1 )
+activation = "On-Hit"
+heal_percentage = 0
+stagger = false
+stun = false
+knock_over = false
+protection = true
+advances_protect_counter = true
+shield = 0
+bond = 0
+rooted = 0
+
+[resource]
+script = ExtResource( 2 )
+name = "Schutzschild"
+targets = "Self"
+multitarget = false
+type = "Status"
+base_damage = 0
+attack_count = 1
+can_miss = false
+accuracy = 100
+priority = 4
+does_crit = false
+used_stat = ""
+target_stat = ""
+element = ""
+uses_additional_spell = "No"
+user_modifiers = [ SubResource( 1 ) ]
+target_modifiers = [  ]
+description = "Protects the user this round from all Spells.
+Advances Protection-Counter"
+evolves_from = ExtResource( 3 )
+evolve_quests = [ ExtResource( 4 ) ]
+required_xp = 1

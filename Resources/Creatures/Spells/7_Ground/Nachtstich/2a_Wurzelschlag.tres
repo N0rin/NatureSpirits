@@ -1,0 +1,51 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/EvolveQuest.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Nachtstich/1c_Wuchtfarnschlag.tres" type="Resource" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+xp_gain = 1
+requirement_type = "Hit"
+variant = "Normal"
+success_required = true
+required_success_chain = 1
+required_spell = ExtResource( 3 )
+required_attacking_stat = "None"
+required_defending_stat = "None"
+required_element = "None"
+required_min_damage = 0
+required_max_damage = 100
+requires_knockout = false
+rising_damage = false
+required_aura = "Ground"
+requires_successfull_modifier = false
+reset_chain_on_xp_gain = true
+reset_chain_on_round_end = false
+required_target = "None"
+round_end_targets = "Self"
+subquests = [  ]
+
+[resource]
+script = ExtResource( 1 )
+name = "Wurzelschlag"
+targets = "Others"
+multitarget = false
+type = ""
+base_damage = 8
+attack_count = 1
+can_miss = true
+accuracy = 90
+priority = 0
+does_crit = false
+used_stat = "Stability"
+target_stat = "Balance"
+element = "Ground"
+uses_additional_spell = "No"
+user_modifiers = [  ]
+target_modifiers = [  ]
+description = "A Ground Attack"
+evolves_from = ExtResource( 3 )
+evolve_quests = [ SubResource( 1 ) ]
+required_xp = 1

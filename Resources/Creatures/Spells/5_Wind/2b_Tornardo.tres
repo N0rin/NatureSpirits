@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "Tornardo"
+targets = "Others"
+multitarget = false
+type = ""
+base_damage = 9
+attack_count = 1
+can_miss = true
+accuracy = 80
+priority = 0
+used_stat = "Balance"
+target_stat = "Leaf"
+element = "Wind"
+uses_additional_spell = 0
+user_modifiers = [  ]
+target_modifiers = [  ]
+description = "A Wind Attack"

@@ -1,0 +1,42 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/UtilityModifier.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Seelenstoss/1a_Seelenstoss.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/EvolveQuests/PollenstromQuest.tres" type="Resource" id=4]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 1 )
+activation = "On-Hit"
+heal_percentage = 0
+stagger = true
+stun = false
+knock_over = false
+protection = false
+advances_protect_counter = false
+shield = 0
+bond = 0
+rooted = 0
+
+[resource]
+script = ExtResource( 2 )
+name = "Pollenstrom"
+targets = "Others"
+multitarget = false
+type = ""
+base_damage = 4
+attack_count = 1
+can_miss = true
+accuracy = 70
+priority = 0
+does_crit = false
+used_stat = "Aroma"
+target_stat = "Leaf"
+element = ""
+uses_additional_spell = "No"
+user_modifiers = [  ]
+target_modifiers = [ SubResource( 1 ) ]
+description = "Staggers the Target"
+evolves_from = ExtResource( 3 )
+evolve_quests = [ ExtResource( 4 ) ]
+required_xp = 3

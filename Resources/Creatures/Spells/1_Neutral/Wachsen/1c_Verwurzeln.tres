@@ -1,0 +1,52 @@
+[gd_resource type="Resource" load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/UtilityModifier.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/StatModifier.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1b_Stabilisieren.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/EvolveQuests/VerwurzelnQuest.tres" type="Resource" id=5]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+activation = "On-Hit"
+random_stat = 0
+stability_change = 2
+balance_change = 0
+leaf_change = 0
+aroma_change = 0
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 1 )
+activation = "On-Hit"
+heal_percentage = 0
+stagger = false
+stun = false
+knock_over = false
+protection = false
+advances_protect_counter = false
+shield = 0
+bond = 0
+rooted = 3
+
+[resource]
+script = ExtResource( 3 )
+name = "Verwurzeln"
+targets = "Self"
+multitarget = false
+type = "Status"
+base_damage = 0
+attack_count = 1
+can_miss = false
+accuracy = 100
+priority = 0
+does_crit = false
+used_stat = ""
+target_stat = ""
+element = ""
+uses_additional_spell = "No"
+user_modifiers = [ SubResource( 1 ), SubResource( 2 ) ]
+target_modifiers = [  ]
+description = "Raises the Stability of the user two times, but the user is rooted for 3 turns."
+evolves_from = ExtResource( 4 )
+evolve_quests = [ ExtResource( 5 ) ]
+required_xp = 1

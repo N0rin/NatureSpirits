@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Combat/Combat.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Fighter/Team/Real Demo Team2/Schlehfrost RealDemo2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/World/GameWorld.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Fighter/Team/Real Demo Team2/Dornjag RealDemo2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Fighter/Team/Real Demo Team2/Birflug RealDemo2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Fighter/Team/Real Demo Team2/Swetschgi RealDemo2.tscn" type="PackedScene" id=7]
+
+[node name="Game" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Combat" parent="." instance=ExtResource( 2 )]
+
+[node name="GameWorld" parent="." instance=ExtResource( 4 )]
+
+[node name="PlayerData" type="Node" parent="."]
+
+[node name="Team" type="Node" parent="PlayerData"]
+
+[node name="Slot1" type="Node" parent="PlayerData/Team"]
+
+[node name="Dornjag" parent="PlayerData/Team/Slot1" instance=ExtResource( 5 )]
+
+[node name="Slot2" type="Node" parent="PlayerData/Team"]
+
+[node name="Schlehfrost" parent="PlayerData/Team/Slot2" instance=ExtResource( 3 )]
+
+[node name="Slot3" type="Node" parent="PlayerData/Team"]
+
+[node name="Birflug" parent="PlayerData/Team/Slot3" instance=ExtResource( 6 )]
+
+[node name="Slot4" type="Node" parent="PlayerData/Team"]
+
+[node name="Swetschgi" parent="PlayerData/Team/Slot4" instance=ExtResource( 7 )]
+
+[node name="Slot5" type="Node" parent="PlayerData/Team"]
+
+[node name="Slot6" type="Node" parent="PlayerData/Team"]

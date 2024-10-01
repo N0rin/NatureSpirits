@@ -1,0 +1,156 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/standard_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/Textures/menu_background.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/UI/SpellSelection.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+
+[node name="SpellSelection" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 100.0
+margin_right = -50.0
+margin_bottom = -50.0
+
+[node name="CreatureList" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 400.0
+margin_bottom = 930.0
+custom_constants/separation = 50
+
+[node name="Creature1" type="Button" parent="HBoxContainer/CreatureList"]
+margin_right = 400.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 400, 50 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/normal = SubResource( 1 )
+text = "Creature Name"
+
+[node name="Creature2" type="Button" parent="HBoxContainer/CreatureList"]
+margin_top = 104.0
+margin_right = 400.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 400, 50 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/normal = SubResource( 1 )
+text = "Creature Name"
+
+[node name="Creature3" type="Button" parent="HBoxContainer/CreatureList"]
+margin_top = 208.0
+margin_right = 400.0
+margin_bottom = 262.0
+rect_min_size = Vector2( 400, 50 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/normal = SubResource( 1 )
+text = "Creature Name"
+
+[node name="Creature4" type="Button" parent="HBoxContainer/CreatureList"]
+margin_top = 312.0
+margin_right = 400.0
+margin_bottom = 366.0
+rect_min_size = Vector2( 400, 50 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/normal = SubResource( 1 )
+text = "Creature Name"
+
+[node name="Creature5" type="Button" parent="HBoxContainer/CreatureList"]
+margin_top = 416.0
+margin_right = 400.0
+margin_bottom = 470.0
+rect_min_size = Vector2( 400, 50 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/normal = SubResource( 1 )
+text = "Creature Name"
+
+[node name="Creature6" type="Button" parent="HBoxContainer/CreatureList"]
+margin_top = 520.0
+margin_right = 400.0
+margin_bottom = 574.0
+rect_min_size = Vector2( 400, 50 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/normal = SubResource( 1 )
+text = "Creature Name"
+
+[node name="Filler" type="Control" parent="HBoxContainer/CreatureList"]
+margin_top = 624.0
+margin_right = 400.0
+margin_bottom = 780.0
+size_flags_vertical = 3
+
+[node name="Exit" type="Button" parent="HBoxContainer/CreatureList"]
+margin_top = 830.0
+margin_right = 400.0
+margin_bottom = 930.0
+rect_min_size = Vector2( 400, 100 )
+size_flags_vertical = 0
+custom_fonts/font = ExtResource( 1 )
+custom_styles/normal = SubResource( 1 )
+text = "EXIT"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+margin_left = 404.0
+margin_right = 1416.0
+margin_bottom = 930.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+
+[node name="Panel" type="Panel" parent="HBoxContainer/MarginContainer"]
+margin_left = 50.0
+margin_right = 962.0
+margin_bottom = 880.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SpellSelection" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 1420.0
+margin_right = 1820.0
+margin_bottom = 930.0
+custom_constants/separation = 10
+
+[node name="SelectedSpells" type="VBoxContainer" parent="HBoxContainer/SpellSelection"]
+margin_right = 400.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/SpellSelection"]
+margin_top = 10.0
+margin_right = 400.0
+margin_bottom = 820.0
+size_flags_vertical = 3
+
+[node name="UnselectedSpells" type="VBoxContainer" parent="HBoxContainer/SpellSelection/ScrollContainer"]
+
+[node name="Apply" type="Button" parent="HBoxContainer/SpellSelection"]
+margin_top = 830.0
+margin_right = 400.0
+margin_bottom = 930.0
+rect_min_size = Vector2( 400, 100 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/normal = SubResource( 1 )
+text = "APPLY"
+
+[connection signal="pressed" from="HBoxContainer/CreatureList/Creature1" to="." method="_on_creature1_pressed"]
+[connection signal="pressed" from="HBoxContainer/CreatureList/Creature2" to="." method="_on_creature2_pressed"]
+[connection signal="pressed" from="HBoxContainer/CreatureList/Creature3" to="." method="_on_creature3_pressed"]
+[connection signal="pressed" from="HBoxContainer/CreatureList/Creature4" to="." method="_on_creature4_pressed"]
+[connection signal="pressed" from="HBoxContainer/CreatureList/Creature5" to="." method="_on_creature5_pressed"]
+[connection signal="pressed" from="HBoxContainer/CreatureList/Creature6" to="." method="_on_creature6_pressed"]
+[connection signal="pressed" from="HBoxContainer/CreatureList/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="HBoxContainer/SpellSelection/Apply" to="." method="_on_apply_button_pressed"]

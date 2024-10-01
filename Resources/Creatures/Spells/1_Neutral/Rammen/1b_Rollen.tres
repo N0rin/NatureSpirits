@@ -1,0 +1,38 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Creatures/EvolveQuests/RollenQuest.tres" type="Resource" id=2]
+[ext_resource path="res://Scripts/Creatures/Spells/SpecialModifier.gd" type="Script" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Rammen/1a_Rammen.tres" type="Resource" id=4]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+activation = "On-Hit"
+repeats = 1
+no_stat_decrease = 0
+symbiosis = false
+fire_boost = 0
+strong_spikes = 0
+
+[resource]
+script = ExtResource( 1 )
+name = "Rollen"
+targets = "Others"
+multitarget = false
+type = ""
+base_damage = 10
+attack_count = 1
+can_miss = true
+accuracy = 80
+priority = 0
+does_crit = false
+used_stat = "Stability"
+target_stat = "Stability"
+element = ""
+uses_additional_spell = "No"
+user_modifiers = [ SubResource( 1 ) ]
+target_modifiers = [  ]
+description = "Repeats Spell next round"
+evolves_from = ExtResource( 4 )
+evolve_quests = [ ExtResource( 2 ) ]
+required_xp = 1

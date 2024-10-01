@@ -1,0 +1,25 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "Luftsprint"
+targets = "Others"
+multitarget = false
+type = "Attack"
+base_damage = 5
+attack_count = 1
+can_miss = true
+accuracy = 100
+priority = 1
+does_crit = false
+used_stat = "Balance"
+target_stat = "Aroma"
+element = "Wind"
+uses_additional_spell = "No"
+user_modifiers = [  ]
+target_modifiers = [  ]
+description = "Angriff, üblicherweise zuerst durchgeführt wird."
+evolve_quests = [  ]
+required_xp = 1

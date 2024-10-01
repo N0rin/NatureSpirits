@@ -1,0 +1,174 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/Textures/KOMIKAX_.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/Combat/Combat UI/BattleInfo.gd" type="Script" id=2]
+[ext_resource path="res://assets/Textures/bg.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Combat/Combat UI/CreatureInfo.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[node name="CreatureInfo" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="LeftAllyInfo" parent="." instance=ExtResource( 4 )]
+margin_left = 64.0
+margin_top = 670.0
+margin_right = 488.0
+margin_bottom = 944.0
+
+[node name="RightAllyInfo" parent="." instance=ExtResource( 4 )]
+margin_left = 512.0
+margin_top = 670.0
+margin_right = 936.0
+margin_bottom = 944.0
+
+[node name="LeftEnemyInfo" parent="." instance=ExtResource( 4 )]
+margin_left = 1008.0
+margin_top = 90.0
+margin_right = 1432.0
+margin_bottom = 364.0
+
+[node name="RightEnemyInfo" parent="." instance=ExtResource( 4 )]
+margin_left = 1455.0
+margin_top = 90.0
+margin_right = 1879.0
+margin_bottom = 364.0
+
+[node name="TerrainInfo" type="Control" parent="."]
+margin_left = 137.0
+margin_top = 45.0
+margin_right = 396.0
+margin_bottom = 280.0
+rect_pivot_offset = Vector2( -453.741, 507.813 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="NinePatchRect" parent="TerrainInfo"]
+modulate = Color( 1, 1, 1, 0.768627 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 3 )
+region_rect = Rect2( 6, 18.3767, 210, 19.6233 )
+patch_margin_right = 178
+patch_margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margin" type="MarginContainer" parent="TerrainInfo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="TerrainInfo/Margin"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 360.0
+margin_bottom = 222.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Field" type="RichTextLabel" parent="TerrainInfo/Margin/VBox"]
+margin_right = 350.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 350, 50 )
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Terrain:"
+text = "Field:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Weather" type="RichTextLabel" parent="TerrainInfo/Margin/VBox"]
+margin_top = 54.0
+margin_right = 350.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 350, 50 )
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = " Fog (%s rounds)"
+text = "Weather"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Aura" type="RichTextLabel" parent="TerrainInfo/Margin/VBox"]
+margin_top = 108.0
+margin_right = 350.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 350, 50 )
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = " Rain (%s rounds)"
+text = "Aura"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Terrain" type="RichTextLabel" parent="TerrainInfo/Margin/VBox"]
+margin_top = 162.0
+margin_right = 350.0
+margin_bottom = 212.0
+rect_min_size = Vector2( 350, 50 )
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = " Rain (%s rounds)"
+text = "Terrain"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AllyLight" type="RichTextLabel" parent="TerrainInfo/Margin/VBox"]
+visible = false
+margin_top = 216.0
+margin_right = 350.0
+margin_bottom = 266.0
+rect_min_size = Vector2( 350, 50 )
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = " Mycel (%s rounds)"
+text = "Light-Ally"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnemyLight" type="RichTextLabel" parent="TerrainInfo/Margin/VBox"]
+visible = false
+margin_top = 216.0
+margin_right = 350.0
+margin_bottom = 266.0
+rect_min_size = Vector2( 350, 50 )
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = " Mycel (%s rounds)"
+text = "Light-Enemy"
+__meta__ = {
+"_edit_use_anchors_": false
+}

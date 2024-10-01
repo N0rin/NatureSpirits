@@ -1,0 +1,13 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Creatures/Species/Moon/Schlehfrost.tres" type="Resource" id=1]
+[ext_resource path="res://Scenes/Fighter/Creature.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/Demo2/WaA1.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/Demo2/WaU1.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/Demo2/EiA4.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Creatures/Spells/Demo2/EiU2.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Creatures/Spells/Demo2/EiA3.tres" type="Resource" id=7]
+
+[node name="Schlehfrost" instance=ExtResource( 2 )]
+base_values = ExtResource( 1 )
+moves = [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 4 ) ]

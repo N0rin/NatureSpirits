@@ -1,0 +1,168 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/Textures/KOMIKAX_.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/Combat/Combat UI/CreatureInfo.gd" type="Script" id=2]
+[ext_resource path="res://assets/Textures/bg.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 1 )
+
+[node name="LeftAllyInfo" type="MarginContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+
+[node name="Background" type="NinePatchRect" parent="."]
+modulate = Color( 1, 1, 1, 0.768627 )
+margin_right = 424.0
+margin_bottom = 270.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 6, 18.3767, 210, 19.6233 )
+patch_margin_right = 178
+patch_margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margin" type="MarginContainer" parent="."]
+margin_right = 424.0
+margin_bottom = 270.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="Margin"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 414.0
+margin_bottom = 260.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Grid" type="GridContainer" parent="Margin/VBox"]
+margin_right = 404.0
+margin_bottom = 182.0
+columns = 2
+
+[node name="Alignment" type="RichTextLabel" parent="Margin/VBox/Grid"]
+margin_right = 200.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 200, 50 )
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Alignment:"
+text = "Alignment:"
+scroll_active = false
+
+[node name="Element" type="RichTextLabel" parent="Margin/VBox/Grid"]
+margin_left = 204.0
+margin_right = 404.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 200, 50 )
+size_flags_horizontal = 3
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "Element:"
+text = "Element:"
+scroll_active = false
+
+[node name="Filler" type="Control" parent="Margin/VBox/Grid"]
+margin_top = 54.0
+margin_right = 200.0
+margin_bottom = 74.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="Filler2" type="Control" parent="Margin/VBox/Grid"]
+margin_left = 204.0
+margin_top = 54.0
+margin_right = 404.0
+margin_bottom = 74.0
+
+[node name="Stability" type="RichTextLabel" parent="Margin/VBox/Grid"]
+margin_top = 78.0
+margin_right = 200.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 150, 50 )
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+bbcode_text = "Stability:"
+text = "Stability:"
+scroll_active = false
+
+[node name="Balance" type="RichTextLabel" parent="Margin/VBox/Grid"]
+margin_left = 204.0
+margin_top = 78.0
+margin_right = 404.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 0, 50 )
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "Balance:"
+text = "Balance:"
+scroll_active = false
+
+[node name="Leaf" type="RichTextLabel" parent="Margin/VBox/Grid"]
+margin_top = 132.0
+margin_right = 200.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 0, 50 )
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "Leaf:"
+text = "Leaf:"
+scroll_active = false
+
+[node name="Aroma" type="RichTextLabel" parent="Margin/VBox/Grid"]
+margin_left = 204.0
+margin_top = 132.0
+margin_right = 404.0
+margin_bottom = 182.0
+custom_fonts/normal_font = SubResource( 6 )
+bbcode_enabled = true
+bbcode_text = "Aroma:"
+text = "Aroma:"
+scroll_active = false
+
+[node name="Filler3" type="Control" parent="Margin/VBox"]
+margin_top = 186.0
+margin_right = 404.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Speedstat" type="RichTextLabel" parent="Margin/VBox"]
+margin_top = 200.0
+margin_right = 404.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 350, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 7 )
+bbcode_enabled = true
+bbcode_text = "Speed depends on %s"
+text = "Speed depends on %s"
+__meta__ = {
+"_edit_use_anchors_": false
+}

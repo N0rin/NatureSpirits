@@ -1,0 +1,45 @@
+[gd_resource type="Resource" load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/UtilityModifier.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1a_Wachsen.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/EvolveQuests/BlockenQuest2.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/EvolveQuests/BlockenQuest1.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Creatures/EvolveQuests/BlockenQuest4.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Creatures/EvolveQuests/BlockenQuest3.tres" type="Resource" id=7]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 1 )
+activation = "On-Hit"
+heal_percentage = 0
+stagger = false
+stun = false
+knock_over = false
+protection = false
+advances_protect_counter = false
+shield = 1
+bond = 0
+rooted = 0
+
+[resource]
+script = ExtResource( 2 )
+name = "Blocken"
+targets = "Self"
+multitarget = false
+type = "Status"
+base_damage = 0
+attack_count = 1
+can_miss = false
+accuracy = 100
+priority = 4
+does_crit = false
+used_stat = ""
+target_stat = ""
+element = ""
+uses_additional_spell = "No"
+user_modifiers = [  ]
+target_modifiers = [ SubResource( 1 ) ]
+description = "Adds 1x Shield to user."
+evolves_from = ExtResource( 3 )
+evolve_quests = [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 6 ) ]
+required_xp = 1

@@ -1,0 +1,20 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Rammen/2a_Wasserrolle.tres" type="Resource" id=1]
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Rammen/2b_Wasserwirbel.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Rammen/2a_Wasserwalze.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Rammen/2a_Eisramme.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Rammen/2b_Regenrolle.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Helfen/2b_Eishaerte.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Helfen/2a_Einfrieren.tres" type="Resource" id=7]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Helfen/2b_Vereisen.tres" type="Resource" id=8]
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Helfen/2b_Wasserwall.tres" type="Resource" id=9]
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Helfen/2a_Bewaessern.tres" type="Resource" id=10]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Rammen/2b_Eisstacheln.tres" type="Resource" id=11]
+[ext_resource path="res://Resources/Creatures/Species/Moon/Schlorn.tres" type="Resource" id=12]
+[ext_resource path="res://Scenes/Fighter/Creature.tscn" type="PackedScene" id=13]
+
+[node name="Schlorn" instance=ExtResource( 13 )]
+base_values = ExtResource( 12 )
+moves = [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 11 ) ]
+learned_spells = [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 2 ) ]

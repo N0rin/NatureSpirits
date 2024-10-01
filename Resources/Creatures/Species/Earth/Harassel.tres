@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Creatures/BaseValues.gd" type="Script" id=1]
+[ext_resource path="res://assets/Creatures/Harassel.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/7_Ground/Helfen/3a_Mycelnetzwerk.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Seelenstoss/3a_Regentanz.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/7_Ground/Nachtstich/3a_Haseleinschlag.tres" type="Resource" id=5]
+
+[resource]
+script = ExtResource( 1 )
+name = "Harassel"
+appearance = ExtResource( 2 )
+type = "Earth"
+element = "Ground"
+speedstat = "Balance"
+max_life = 27
+stability = 8
+balance = 3
+leaf = 5
+aroma = 6
+potential_moves = [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 3 ) ]
+evolutions = [  ]

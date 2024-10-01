@@ -1,0 +1,27 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Creatures/Spells/0_Technical/Recharge.tres" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Erdstoss"
+targets = "Others"
+multitarget = false
+type = "Attack"
+base_damage = 15
+attack_count = 1
+can_miss = true
+accuracy = 100
+priority = 0
+does_crit = false
+used_stat = "Stability"
+target_stat = "Balance"
+element = "Ground"
+uses_additional_spell = "After"
+extra_spell = ExtResource( 2 )
+user_modifiers = [  ]
+target_modifiers = [  ]
+description = "Starker Angriff, allerdings kann Nutzer nächste Runde nicht angreifen."
+evolve_quests = [  ]
+required_xp = 1

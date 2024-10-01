@@ -1,0 +1,13 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Creatures/Species/Sun/Fekirsch.tres" type="Resource" id=1]
+[ext_resource path="res://Scenes/Fighter/Creature.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/Demo2/FeA3.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/Demo2/FeA1.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/Demo2/FeA4.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Creatures/Spells/Demo2/FeA2.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Creatures/Spells/Demo2/FeU1.tres" type="Resource" id=7]
+
+[node name="Fekirsch" instance=ExtResource( 2 )]
+base_values = ExtResource( 1 )
+moves = [ ExtResource( 4 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 7 ) ]

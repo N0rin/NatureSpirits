@@ -1,0 +1,13 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Rammen/2a_Eisramme.tres" type="Resource" id=1]
+[ext_resource path="res://Resources/Creatures/Spells/5_Wind/Wachsen/2a_Wirbeltanz.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Helfen/2a_Einfrieren.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Helfen/2b_Vereisen.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/3_Frost/Rammen/2b_Eisstacheln.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Creatures/Species/Moon/Dornjag.tres" type="Resource" id=6]
+[ext_resource path="res://Scenes/Fighter/Creature.tscn" type="PackedScene" id=7]
+
+[node name="Dornjag" instance=ExtResource( 7 )]
+base_values = ExtResource( 6 )
+moves = [ ExtResource( 4 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 2 ) ]

@@ -1,0 +1,140 @@
+[gd_resource type="Resource" load_steps=12 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/Condition.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/StatusModifier.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Creatures/Spells/Factor.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Creatures/Spells/EvolveQuest.gd" type="Script" id=5]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Seelenstoss/2a_Hitzehauch.tres" type="Resource" id=6]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 1 )
+is_checking_user = false
+move_order = ""
+chance = 100
+is_cost = false
+is_fail_condition = false
+burn = 1
+frost = 0
+wet = 0
+moss = 0
+charged = 0
+light = 0
+min_round = 0
+max_round = -1
+repetitions = 0
+required_aura = "None"
+required_terrain = "None"
+required_weather = "None"
+stagger = 0
+rooted = 0
+bond = 0
+check_stat_boosts = "No"
+check_stability = false
+check_balance = false
+check_leaf = false
+check_aroma = false
+check_speed = false
+stability_boost = 0
+balance_boost = 0
+leaf_boost = 0
+aroma_boost = 0
+speed_boost = 0
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 4 )
+mode = "Multiplicative"
+condition = SubResource( 1 )
+flat_value = 1
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 1 )
+is_checking_user = true
+move_order = ""
+chance = 100
+is_cost = false
+is_fail_condition = false
+burn = 2
+frost = 0
+wet = 0
+moss = 0
+charged = 0
+light = 0
+min_round = 0
+max_round = 0
+repetitions = 0
+required_aura = "None"
+required_terrain = "None"
+required_weather = "None"
+stagger = 0
+rooted = 0
+bond = 0
+check_stat_boosts = "No"
+check_stability = false
+check_balance = false
+check_leaf = false
+check_aroma = false
+check_speed = false
+stability_boost = 0
+balance_boost = 0
+leaf_boost = 0
+aroma_boost = 0
+speed_boost = 0
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 5 )
+xp_gain = 1
+requirement_type = "Hit"
+variant = "Normal"
+success_required = true
+required_success_chain = 1
+required_spell = ExtResource( 6 )
+required_attacking_stat = "None"
+required_defending_stat = "None"
+required_element = "None"
+required_min_damage = 0
+required_max_damage = 100
+requires_knockout = false
+rising_damage = false
+required_aura = ""
+requires_successfull_modifier = false
+reset_chain_on_xp_gain = true
+reset_chain_on_round_end = false
+required_target = "None"
+round_end_targets = "Self"
+condition = SubResource( 4 )
+subquests = [  ]
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 2 )
+activation = "After"
+mode = "Heal"
+burn = 1
+frost = 0
+wet = 0
+moss = 0
+charge = 0
+
+[resource]
+script = ExtResource( 3 )
+name = "Feuerhauch"
+targets = "Enemies"
+multitarget = true
+type = ""
+base_damage = 3
+damage_factor = SubResource( 2 )
+attack_count = 1
+can_miss = true
+accuracy = 85
+priority = 0
+does_crit = false
+used_stat = "Aroma"
+target_stat = "Leaf"
+element = "Fire"
+uses_additional_spell = "No"
+user_modifiers = [ SubResource( 3 ) ]
+target_modifiers = [  ]
+description = "Hits both Enemies. Removes Burn from User and does extra damage for each burn-stack"
+evolves_from = ExtResource( 6 )
+evolve_quests = [ SubResource( 5 ) ]
+required_xp = 1

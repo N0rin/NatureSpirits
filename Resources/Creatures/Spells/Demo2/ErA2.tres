@@ -1,0 +1,25 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "Erdbeben"
+targets = "Others"
+multitarget = true
+type = "Attack"
+base_damage = 10
+attack_count = 1
+can_miss = true
+accuracy = 100
+priority = 0
+does_crit = false
+used_stat = "Stability"
+target_stat = "Balance"
+element = "Ground"
+uses_additional_spell = "No"
+user_modifiers = [  ]
+target_modifiers = [  ]
+description = "Flächenangriff, wo auch Partner trifft."
+evolve_quests = [  ]
+required_xp = 1

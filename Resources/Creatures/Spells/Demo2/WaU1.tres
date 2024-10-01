@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/StatusModifier.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+activation = "On-Hit"
+mode = "Add"
+burn = 0
+frost = 0
+wet = 2
+moss = 0
+charge = 0
+
+[resource]
+script = ExtResource( 1 )
+name = "Durchnässen"
+targets = "All"
+multitarget = false
+type = "Status"
+base_damage = 0
+attack_count = 1
+can_miss = true
+accuracy = 100
+priority = 0
+does_crit = false
+used_stat = ""
+target_stat = ""
+element = "Water"
+uses_additional_spell = "No"
+user_modifiers = [  ]
+target_modifiers = [ SubResource( 1 ) ]
+description = "Fügt Ziel 2x Nässe hinzu."
+evolve_quests = [  ]
+required_xp = 1

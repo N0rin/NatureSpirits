@@ -1,0 +1,13 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Rammen/2a_Wasserrolle.tres" type="Resource" id=1]
+[ext_resource path="res://Resources/Creatures/Species/Earth/Schalhasel.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/7_Ground/Wachsen/2b_Wurzelheilung.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/7_Ground/Wachsen/2a_Eingraben.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/7_Ground/Nachtstich/2a_Wurzelschlag.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Creatures/Spells/7_Ground/Nachtstich/2b_Haselschwinger.tres" type="Resource" id=6]
+[ext_resource path="res://Scenes/Fighter/Creature.tscn" type="PackedScene" id=7]
+
+[node name="Schalhasel" instance=ExtResource( 7 )]
+base_values = ExtResource( 2 )
+moves = [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 3 ) ]

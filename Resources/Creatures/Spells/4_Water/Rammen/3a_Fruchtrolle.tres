@@ -1,0 +1,82 @@
+[gd_resource type="Resource" load_steps=11 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/StatusModifier.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/StatModifier.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Creatures/Spells/EvolveQuest.gd" type="Script" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/4_Water/Rammen/2b_Regenrolle.tres" type="Resource" id=5]
+[ext_resource path="res://Scripts/Creatures/Spells/SpecialModifier.gd" type="Script" id=6]
+
+[sub_resource type="Resource" id=7]
+script = ExtResource( 4 )
+xp_gain = 1
+requirement_type = "Hit"
+variant = "Normal"
+success_required = true
+required_success_chain = 1
+required_spell = ExtResource( 5 )
+required_attacking_stat = "None"
+required_defending_stat = "None"
+required_element = "None"
+required_min_damage = 18
+required_max_damage = 100
+requires_knockout = false
+rising_damage = false
+required_aura = ""
+requires_successfull_modifier = false
+reset_chain_on_xp_gain = true
+reset_chain_on_round_end = false
+required_target = "None"
+round_end_targets = "Self"
+subquests = [  ]
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 1 )
+activation = "Before"
+mode = "Consume"
+burn = 0
+frost = 0
+wet = 1
+moss = 0
+charge = 0
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 2 )
+activation = "On-Hit"
+random_stat = 0
+stability_change = 0
+balance_change = 1
+leaf_change = 1
+aroma_change = 1
+
+[sub_resource type="Resource" id=6]
+script = ExtResource( 6 )
+activation = "On-Hit"
+repeats = 4
+no_stat_decrease = 0
+symbiosis = false
+fire_boost = 0
+strong_spikes = 0
+
+[resource]
+script = ExtResource( 3 )
+name = "Fruchtrolle"
+targets = "Others"
+multitarget = false
+type = ""
+base_damage = 2
+attack_count = 1
+can_miss = true
+accuracy = 100
+priority = 0
+does_crit = false
+used_stat = "Stability"
+target_stat = "Stability"
+element = "Water"
+uses_additional_spell = "No"
+user_modifiers = [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ]
+target_modifiers = [  ]
+description = "Consumes Wet. Raises Balance, Leaf and Aroma. Power increases with each repetition. Repeats 4 times."
+evolves_from = ExtResource( 5 )
+evolve_quests = [ SubResource( 7 ) ]
+required_xp = 1

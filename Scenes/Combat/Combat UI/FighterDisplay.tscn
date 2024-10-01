@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Combat/Combat UI/BattleSlot.tscn" type="PackedScene" id=1]
+
+[node name="Display" type="Control"]
+margin_left = 956.0
+margin_right = 956.0
+margin_bottom = 480.0
+
+[node name="EnemyDisplay" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_right = 964.0
+margin_bottom = 546.0
+rect_rotation = -0.0359513
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnemySlotLeft" parent="EnemyDisplay" instance=ExtResource( 1 )]
+margin_right = 480.0
+margin_bottom = 546.0
+
+[node name="EnemySlotRight" parent="EnemyDisplay" instance=ExtResource( 1 )]
+margin_left = 480.0
+margin_right = 960.0
+margin_bottom = 546.0
+
+[node name="AllyDisplay" type="Control" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -956.0
+margin_top = 54.0
+margin_right = 8.0
+margin_bottom = 600.0
+rect_rotation = -0.0359513
+
+[node name="AllySlotLeft" parent="AllyDisplay" instance=ExtResource( 1 )]
+margin_right = 480.0
+margin_bottom = 546.0
+
+[node name="AllySlotRight" parent="AllyDisplay" instance=ExtResource( 1 )]
+margin_left = 480.0
+margin_right = 960.0
+margin_bottom = 546.0

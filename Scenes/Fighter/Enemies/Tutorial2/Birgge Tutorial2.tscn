@@ -1,0 +1,15 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1b_Stabilisieren.tres" type="Resource" id=1]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Seelenstoss/1b_Pollenstrom.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1b_Blocken.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1b_Geistertanz.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Nachtstich/1b_Farnschlag.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Creatures/Species/Base/Birgge.tres" type="Resource" id=6]
+[ext_resource path="res://Scenes/Fighter/Creature.tscn" type="PackedScene" id=7]
+
+[node name="Birgge" instance=ExtResource( 7 )]
+custom_name = "Birg C"
+current_hp = 20
+base_values = ExtResource( 6 )
+moves = [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 2 ) ]

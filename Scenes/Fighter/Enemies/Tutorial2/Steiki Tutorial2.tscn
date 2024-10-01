@@ -1,0 +1,14 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1b_Blocken.tres" type="Resource" id=1]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Wachsen/1b_Geistertanz.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Helfen/1b_Stoeren.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Rammen/1b_Rollen.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Rammen/1b_Starkramme.tres" type="Resource" id=5]
+[ext_resource path="res://Scenes/Fighter/Creature.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Resources/Creatures/Species/Base/Steiki.tres" type="Resource" id=7]
+
+[node name="Steiki" instance=ExtResource( 6 )]
+current_hp = 20
+base_values = ExtResource( 7 )
+moves = [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 2 ) ]

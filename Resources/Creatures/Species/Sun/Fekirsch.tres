@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Creatures/BaseValues.gd" type="Script" id=1]
+[ext_resource path="res://assets/Creatures/Fekirsch.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Helfen/3a_Glutboden.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Geistkugel/3a_Feuerbeeren.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Creatures/Spells/2_Fire/Helfen/3a_Flammenritual.tres" type="Resource" id=5]
+
+[resource]
+script = ExtResource( 1 )
+name = "Fekirsch"
+appearance = ExtResource( 2 )
+type = "Sun"
+element = "Fire"
+speedstat = "Leaf"
+max_life = 24
+stability = 4
+balance = 4
+leaf = 4
+aroma = 10
+potential_moves = [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 3 ) ]
+evolutions = [  ]

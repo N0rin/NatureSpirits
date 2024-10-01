@@ -1,0 +1,81 @@
+[gd_resource type="Resource" load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Creatures/EvolveQuests/MomentumrolleQuest.tres" type="Resource" id=2]
+[ext_resource path="res://Scripts/Creatures/Spells/Condition.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Creatures/Spells/Factor.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Creatures/Spells/SpecialModifier.gd" type="Script" id=5]
+[ext_resource path="res://Resources/Creatures/Spells/1_Neutral/Rammen/1b_Rollen.tres" type="Resource" id=6]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+is_checking_user = true
+move_order = ""
+chance = 100
+is_cost = false
+is_fail_condition = false
+burn = 0
+frost = 0
+wet = 0
+moss = 0
+charged = 0
+light = 0
+min_round = 0
+max_round = -1
+repetitions = 1
+required_aura = "None"
+required_terrain = "None"
+required_weather = "None"
+stagger = 0
+rooted = 0
+bond = 0
+check_stat_boosts = "No"
+check_stability = false
+check_balance = false
+check_leaf = false
+check_aroma = false
+check_speed = false
+stability_boost = 0
+balance_boost = 0
+leaf_boost = 0
+aroma_boost = 0
+speed_boost = 0
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 4 )
+mode = "Multiplicative"
+condition = SubResource( 1 )
+flat_value = 1
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 5 )
+activation = "On-Hit"
+repeats = 2
+no_stat_decrease = 0
+symbiosis = false
+fire_boost = 0
+strong_spikes = 0
+
+[resource]
+script = ExtResource( 1 )
+name = "Momentumrolle"
+targets = "Others"
+multitarget = false
+type = ""
+base_damage = 7
+damage_factor = SubResource( 2 )
+attack_count = 1
+can_miss = true
+accuracy = 90
+priority = 0
+does_crit = false
+used_stat = "Stability"
+target_stat = "Stability"
+element = ""
+uses_additional_spell = "No"
+user_modifiers = [ SubResource( 3 ) ]
+target_modifiers = [  ]
+description = "Repeats two times and increases Power with each use."
+evolves_from = ExtResource( 6 )
+evolve_quests = [ ExtResource( 2 ) ]
+required_xp = 1

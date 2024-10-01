@@ -1,0 +1,79 @@
+[gd_resource type="Resource" load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/Creatures/Spells/Spell.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Creatures/Spells/Condition.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Creatures/Spells/StatusModifier.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Creatures/Spells/Factor.gd" type="Script" id=4]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+is_checking_user = false
+move_order = ""
+chance = 100
+is_cost = false
+is_fail_condition = false
+burn = 0
+frost = 1
+wet = 0
+moss = 0
+charged = 0
+light = 0
+min_round = 0
+max_round = 0
+repetitions = 0
+required_aura = "None"
+required_terrain = "None"
+required_weather = "None"
+stagger = 0
+rooted = 0
+bond = 0
+check_stat_boosts = "No"
+check_stability = false
+check_balance = false
+check_leaf = false
+check_aroma = false
+check_speed = false
+stability_boost = 0
+balance_boost = 0
+leaf_boost = 0
+aroma_boost = 0
+speed_boost = 0
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 4 )
+mode = "Multiplicative"
+condition = SubResource( 1 )
+flat_value = 1
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 3 )
+activation = "After"
+mode = "Heal"
+burn = 0
+frost = 1
+wet = 0
+moss = 0
+charge = 0
+
+[resource]
+script = ExtResource( 1 )
+name = "Frosthauch"
+targets = "Enemies"
+multitarget = true
+type = "Attack"
+base_damage = 3
+damage_factor = SubResource( 2 )
+attack_count = 1
+can_miss = true
+accuracy = 100
+priority = 0
+does_crit = false
+used_stat = "Aroma"
+target_stat = "Leaf"
+element = "Frost"
+uses_additional_spell = "No"
+user_modifiers = [ SubResource( 3 ) ]
+target_modifiers = [  ]
+description = "Entfernt Frost vom Nutzer und fügt pro Frost extra Schaden zu. Trifft beide Gegner."
+evolve_quests = [  ]
+required_xp = 1

@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Combat/AI/Commander.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Combat/AI/Predicter.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Combat/AI/Decider/Simple_Damage_Decider.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 3 )
+
+[node name="SimpleDamage" type="Node"]
+script = ExtResource( 1 )
+predicter_list = [ SubResource( 1 ) ]
+predicter_weights = [ 1 ]
+decider_list = [ SubResource( 2 ) ]
+decider_weights = [ 1 ]
